@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "Segoe UI";
+  src: url("fonts/segoe-ui-9.ttf") format("truetype");
+}
+
+* {
+  font-family: "Segoe UI";
+  background-color: #ccd6e5;
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+}
+
+.tabs {
+}
+
+.tab-label {
+  display: inline-block;
+  padding: 3px 16px;
+  width: 30px;
+  text-align: center;
+}
+
+.tab {
+  display: none;
+  background: #f5f6f7;
+  min-width: 800px;
+  width: 100%;
+  min-height: 120px;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.container {
+  max-width: 120px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.container-items {
+  flex: 1;
+  text-align: center;
+  float: left;
+  width: 110px;
+  height: 110px;
+  position: relative;
+  background: #f5f6f7;
+}
+
+.text-both {
+  position: absolute;
+  bottom: 0;
+  background: #f5f6f7;
+  color: #cacaca;
+}
+
+#tab-file {
+  background: #1979ca;
+  color: white;
+}
+#tab-home {
+  background: #f5f6f7;
+}
+#tab-view {
+  background: #ffffff;
+}
+
+input[type="radio"]{
+	display: none;
+}
+
+#toggle-tab1:checked ~ label[for="toggle-tab1"],
+#toggle-tab2:checked ~ label[for="toggle-tab2"],
+#toggle-tab3:checked ~ label[for="toggle-tab3"] {
+
+}
+
+#toggle-tab1:checked ~ #tab1,
+#toggle-tab2:checked ~ #tab2,
+#toggle-tab3:checked ~ #tab3 {
+  display: block;
+}

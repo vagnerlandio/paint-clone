@@ -1,0 +1,90 @@
+//output:index.html, pretty:true
+
+<!DOCTYPE html>
+html(dir="ltr")
+  head
+    meta(charset="utf-8")
+    script(src="scripts/script.js", charset="utf-8")
+    link(rel="stylesheet", href="styles/style.css")
+    title Paint Clone
+  body
+    .tabs
+      input#toggle-tab1(
+        type="radio"
+        name="tabs"
+      )
+      label#tab-file.tab-label File
+      input#toggle-tab1(
+        type="radio"
+        name="tabs"
+      )
+      label#tab-file.tab-label Home
+      input#toggle-tab1(
+        type="radio"
+        name="tabs"
+      )
+      label#tab-file.tab-label View
+      input#toggle-tab1(
+        type="radio"
+        name="tabs"
+      )
+    //  
+    #tab1.tab
+      Tab content 1
+    #tab2.tab.container.row
+      #clipboard.container-items
+        .items
+          #paste
+            label Paste
+          #cut
+            label Cut
+          #copy
+            label Copy
+        label.text-both Clipboard
+      #image.container-items
+        .items
+          #select
+            label Select
+          #crop
+            label Crop
+          #resize
+            label Resize
+          #rotate
+            label Rotate
+        label.text-both Image
+      #tools.container-items
+        .items
+          #1
+          #1
+          #1
+          #1
+          #1
+          #1
+        label.text-both Tools
+      #shapes.container-items
+        label.text-both Shapes
+      #colors.container-items
+        #primary-color
+          .big-color-block
+          label Color 1
+        #secondary-color
+          .big-color-block
+          label Color 2
+        #colors
+          mixin color(name)
+            .color
+              i(class!=attributes.class)= name
+          
+          //first line
+          each val in ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"]
+            +color(val)(class="c-#{val}")
+          //second line
+          each val in ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"]
+            +color(val)(class="c-#{val}")
+          //third line
+          each val in ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"]
+            +color(val)(class="c-#{val}")
+        #edit-colors
+        label.text-both Colors
+    #tab3.tab
+      Tab content 1
